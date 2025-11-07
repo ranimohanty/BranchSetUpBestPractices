@@ -62,6 +62,52 @@ fun GreetingPreview() {
 }
 
 @Composable
+fun RegistrationScreen(){
+    var name by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text("Register", style = MaterialTheme.typography.headlineMedium)
+        Spacer(Modifier.height(16.dp))
+
+        OutlinedTextField(value = name, onValueChange = { name = it }, label = { Text("Name") })
+        Spacer(Modifier.height(8.dp))
+        OutlinedTextField(value = email, onValueChange = { email = it }, label = { Text("Email") })
+        Spacer(Modifier.height(8.dp))
+        OutlinedTextField(
+            value = password,
+            onValueChange = { password = it },
+            label = { Text("Password") },
+            visualTransformation = PasswordVisualTransformation()
+        )
+        Spacer(Modifier.height(16.dp))
+
+        Button(
+            onClick = {
+                // Functionality will be implemented
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Register")
+        }
+        Spacer(Modifier.height(8.dp))
+        TextButton(onClick = {
+            // Functionality will be implemented
+        }) {
+            Text("Already have an account? Login")
+        }
+    }
+}
+
+
+
+@Composable
 fun ForgotPasswordScreen() {
     var email by remember { mutableStateOf("") }
 
