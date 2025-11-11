@@ -1,6 +1,7 @@
 package com.example.demoapplication
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -42,6 +43,9 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+    fun showToast(){
+        Toast.makeText(this, "Toast message print", Toast.LENGTH_SHORT).show()
     }
 }
 
@@ -161,3 +165,5 @@ fun SelfSignUp(){
 
     }
 }
+
+
