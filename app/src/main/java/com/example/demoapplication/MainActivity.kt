@@ -149,3 +149,15 @@ fun LoginScreen() {
         }
     }
 }
+
+@Composable
+fun SelfSignUp(){
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
+        verticalArrangement = Arrangement.Center
+    ) {
+
+    }
+}
